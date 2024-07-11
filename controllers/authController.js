@@ -31,7 +31,7 @@ exports.register = async (req, res) => {
       from: process.env.EMAIL,
       to: email,
       subject: 'Account Activation',
-      html: `<p>Click <a href="${process.env.CLIENT_URL}/activate/${activationToken}">here</a> to activate your account.</p>`,
+      html: `<p>Click <a href="${process.env.BASE_URL}/api/auth/activate/${activationToken}">here</a> to activate your account.</p>`,
     };
 
     await transporter.sendMail(mailOptions);
