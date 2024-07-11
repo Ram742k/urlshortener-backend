@@ -17,7 +17,7 @@ const MONGO_URI = process.env.MONGO_URI;
 app.use(express.json()); // for parsing application/json
 app.use(cookieParser()); // for parsing cookies
 const corsOptions = {
-    origin: 'http://localhost:5173',
+    origin: 'https://incandescent-otter-95ca8c.netlify.app/',
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
     allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'],
     credentials: true, // Allow cookies to be sent
