@@ -17,11 +17,13 @@ const MONGO_URI = process.env.MONGO_URI;
 app.use(express.json()); // for parsing application/json
 app.use(cookieParser()); // for parsing cookies
 const corsOptions = {
-    origin: 'https://incandescent-otter-95ca8c.netlify.app/',
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    origin: 'https://incandescent-otter-95ca8c.netlify.app',
+    methods: 'GET,POST,PUT,DELETE,OPTIONS',
     allowedHeaders: ['Content-Type', 'Authorization', 'x-auth-token'],
     credentials: true, // Allow cookies to be sent
   };
+
+
   
   app.use(cors(corsOptions));
 mongoose.connect(MONGO_URI)
