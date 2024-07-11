@@ -42,8 +42,22 @@ This project is a URL shortener service where users can shorten long URLs and ma
     {
       "msg": "Registration successful"
     }
+
     ```
 
+#### Activate
+
+- **URL:** `/api/auth/activate/:token`
+- **Method:** `GET`
+- **Description:** Activate a user's account using the activation token sent in the email.
+- **Response:**
+    ```json
+    {
+      "msg": "Account activated"
+    }
+    ```
+
+    
 #### Login
 
 - **URL:** `/api/auth/login`
@@ -84,7 +98,7 @@ This project is a URL shortener service where users can shorten long URLs and ma
     ```
 #### Reset password
 
-- **URL:** `/api/auth/reset-password`
+- **URL:** `/api/auth/reset-password/:token`
 - **Method:** `POST`
 - **Description:** Reset the user's password using the reset token sent in the email.
 - **Request Body:**
