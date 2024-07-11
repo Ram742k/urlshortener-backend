@@ -45,7 +45,7 @@ exports.register = async (req, res) => {
 };
 
 exports.activate = async (req, res) => {
-  const { token } = req.body;
+  const { token } = req.params;
   console.log(token);
   try {
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
